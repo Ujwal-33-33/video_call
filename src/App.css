@@ -1,38 +1,147 @@
-.App {
+/* Basic reset for margin and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f2f5;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Style the notes app container */
+.notes-app {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 100%;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Title styling */
+.title {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #333;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Input container styling */
+.input-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+/* Note input styling */
+.note-input {
+  flex: 1;
+  padding: 10px 15px;
+  border: 2px solid #ddd;
+  border-radius: 25px;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+  margin-right: 10px;
+}
+
+/* Add button styling */
+.add-button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 25px;
+  background: linear-gradient(45deg, #007bff, #0056b3);
   color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.App-link {
-  color: #61dafb;
+/* Hover state for the add button */
+.add-button:hover {
+  background: linear-gradient(45deg, #0056b3, #004080);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Active state for the add button */
+.add-button:active {
+  background: linear-gradient(45deg, #004080, #00264d);
+  box-shadow: 0 3px 4px rgba(0, 0, 0, 0.2);
+  transform: translateY(2px);
 }
+
+/* Notes list styling */
+.notes-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Note item styling */
+.note-item {
+  background: #f9f9f9;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Note text styling */
+.note-text {
+  flex: 1;
+  margin-right: 10px;
+  font-size: 16px;
+  color: #333;
+}
+
+/* Note buttons container */
+.note-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+/* Edit button styling */
+.edit-button {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #ffc107;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Hover state for edit button */
+.edit-button:hover {
+  background-color: #e0a800;
+}
+
+/* Delete button styling */
+.delete-button {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #dc3545;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Hover state for delete button */
+.delete-button:hover {
+  background-color: #c82333;
+}
+
+
+
+
+
